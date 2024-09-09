@@ -21,6 +21,8 @@ class Trainer:
         self.discriminator.to(self.config.training.device)
         self.perceptual_network = VGG19().to(self.config.training.device)
         if config.training.compiled and torch.cuda.is_available():
+            import torch._dynamo
+            torch._dynamo.config.suppress_errors = True
             self.generator = torch.compile(self.generator, mode="max-autotune")
             self.discriminator = torch.compile(self.discriminator, mode="max-autotune")
             self.perceptual_network = torch.compile(self.perceptual_network, mode="max-autotune")
