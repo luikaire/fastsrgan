@@ -15,7 +15,7 @@ discriminator:
   n_filters: 64
   n_layers: 7
 training:
-  compiled: false
+  compiled: true
   pretrain_iterations: 100 
   iterations: 100000
   device: cuda
