@@ -94,10 +94,10 @@ class Generator(torch.nn.Module):
             torch.nn.InstanceNorm2d(config.n_filters),
         )
 
-        self.upsampling = torch.nn.Sequential(
-            UpSamplingBlock(config),
-            UpSamplingBlock(config),
-        )
+        # ~ self.upsampling = torch.nn.Sequential(
+            # ~ UpSamplingBlock(config),
+            # ~ UpSamplingBlock(config),
+        # ~ )
 
         self.head = torch.nn.Sequential(
             torch.nn.Conv2d(
@@ -113,7 +113,7 @@ class Generator(torch.nn.Module):
         residual = self.neck(x)
         x = self.stem(residual)
         x = self.bottleneck(x) + residual
-        x = self.upsampling(x)
+        # ~ x = self.upsampling(x)
         return self.head(x)
 
 
