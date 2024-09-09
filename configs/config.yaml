@@ -2,10 +2,10 @@ experiment:
   name: "SRGAN"
   seed: 1234
 data:
-  image_dir: "/home/ani/code/misc/deepfake/video_restore/Fast-SRGAN.mymod/input/gt"
-  image_dir_lq: "/home/ani/code/misc/deepfake/video_restore/Fast-SRGAN.mymod/input/lq"
-  numpy_dir: "/home/ani/code/misc/deepfake/video_restore/Fast-SRGAN.mymod/numpy/gt"
-  numpy_dir_lq: "/home/ani/code/misc/deepfake/video_restore/Fast-SRGAN.mymod/numpy/lq"
+  image_dir: "/root/fastsrgan/input/gt"
+  image_dir_lq: "/root/fastsrgan/input/lq"
+  numpy_dir: "/root/fastsrgan/numpy/gt"
+  numpy_dir_lq: "/root/fastsrgan/numpy/lq"
   lr_image_size: 48
   scale_factor: 1
 generator:
