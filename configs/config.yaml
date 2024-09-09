@@ -1,0 +1,28 @@
+experiment:
+  name: "SRGAN"
+  seed: 1234
+data:
+  image_dir: "/home/ani/code/misc/deepfake/video_restore/Fast-SRGAN.mymod/input/gt"
+  image_dir_lq: "/home/ani/code/misc/deepfake/video_restore/Fast-SRGAN.mymod/input/lq"
+  numpy_dir: "/home/ani/code/misc/deepfake/video_restore/Fast-SRGAN.mymod/numpy/gt"
+  numpy_dir_lq: "/home/ani/code/misc/deepfake/video_restore/Fast-SRGAN.mymod/numpy/lq"
+  lr_image_size: 24
+  scale_factor: 1
+generator:
+  n_filters: 64
+  n_layers: 8 
+discriminator:
+  n_filters: 64
+  n_layers: 7
+training:
+  compiled: false
+  pretrain_iterations: 100 
+  iterations: 100000
+  device: cuda
+  log_iter: 200
+  checkpoint_iter: 100
+  batch_size: 24
+  num_workers: 12
+  generator_lr: 1e-4
+  discriminator_lr: 1e-4
+
