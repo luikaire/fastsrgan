@@ -22,7 +22,7 @@ training:
   log_iter: 200
   checkpoint_iter: 100
   batch_size: 24
-  num_workers: 12
+  num_workers: 2
   generator_lr: 1e-4
   discriminator_lr: 1e-4
 
