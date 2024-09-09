@@ -6,7 +6,7 @@ data:
   image_dir_lq: "/root/fastsrgan/input/lq"
   numpy_dir: "/root/fastsrgan/numpy/gt"
   numpy_dir_lq: "/root/fastsrgan/numpy/lq"
-  lr_image_size: 48
+  lr_image_size: 24
   scale_factor: 1
 generator:
   n_filters: 64
