@@ -20,7 +20,7 @@ training:
   iterations: 100000
   device: cuda
   log_iter: 200
-  checkpoint_iter: 100
+  checkpoint_iter: 2000
   batch_size: 24
   num_workers: 2
   generator_lr: 1e-4
